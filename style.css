@@ -1,0 +1,340 @@
+/* Global Variable */
+:root {
+  --margin-top: 30px;
+  --container-border-radius: 10px;
+  --padding-section: 30px;
+}
+/* Global Variable */
+/* Global Rule */
+html {
+  scroll-behavior: smooth;
+}
+
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+a {
+  text-decoration: none;
+}
+
+ul {
+  list-style: none;
+}
+
+body {
+  background-color: rgb(233, 233, 233);
+}
+
+.container {
+  margin: 0 auto;
+  padding: 0 15px;
+}
+
+/* Small Screen */
+@media (min-width: 768px) {
+  .container {
+    width: 750px;
+  }
+}
+
+/* Medium Screen */
+@media (min-width: 992px) {
+  .container {
+    width: 970px;
+  }
+}
+
+/* Large Screen */
+@media (min-width: 1200px) {
+  .container {
+    width: 1170px;
+  }
+}
+/* Global Rule */
+
+/* Go Top Button */
+.go-top a {
+  width: 50px;
+  height: 50px;
+  background-color: dodgerblue;
+  color: white;
+  position: fixed;
+  right: 30px;
+  bottom: 30px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 40px;
+  font-weight: bold;
+  border-radius: 5px;
+}
+/* Go Top Button */
+
+/* Start Header */
+h3 {
+  font-size: 30px;
+}
+
+header {
+  margin-top: var(--margin-top);
+}
+
+header .container {
+  background-color: #3d3c3c;
+  border-radius: var(--container-border-radius);
+  text-align: center;
+  padding-block: var(--padding-section);
+  color: white;
+}
+
+header .container h2 {
+  color: #777;
+  margin-top: 5px;
+}
+
+header .container nav ul {
+  display: flex;
+  justify-content: center;
+  margin-top: 20px;
+}
+
+header .container nav ul li a {
+  color: white;
+  padding: 0 20px;
+  transition: 0.3s;
+}
+
+header .container nav ul li a:hover {
+  color: goldenrod;
+}
+/* End Header */
+
+/* Start About me */
+.about-me {
+  margin-top: var(--margin-top);
+}
+
+.about-me .container {
+  background-color: white;
+  padding-block: var(--padding-section);
+  border-radius: var(--container-border-radius);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.4);
+}
+
+.about-me .container p {
+  margin-top: 10px;
+  line-height: 1.6;
+}
+
+.about-me .container img {
+  position: relative;
+  left: 50%;
+  transform: translateX(-50%);
+  border-radius: 50%;
+  margin-top: 20px;
+}
+/* End About me */
+
+/* Start Task Management */
+.task {
+  width: 200px;
+  height: 250px;
+  background-color: purple;
+  border-radius: var(--container-border-radius);
+  padding: 20px;
+  text-align: center;
+  position: absolute;
+  bottom: 110px;
+  left: 200px;
+}
+
+/* End Task Management */
+
+/* Start Skills */
+.skills {
+  margin-top: var(--margin-top);
+}
+
+.skills .container {
+  background-image: url("https://images.unsplash.com/photo-1652305459315-ea3418b9f0e3?fm=jpg&q=60&w=3000&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8M3x8Ymx1ZSUyMGFic3RyYWN0fGVufDB8fDB8fHww");
+  background-size: cover;
+  background-position: center;
+  padding-block: var(--padding-section);
+  border-radius: var(--container-border-radius);
+}
+
+.skills .container h3 {
+  color: white;
+}
+
+.skills .container .btns {
+  background-color: rgba(255, 255, 255, 0.6);
+  padding: 20px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+  margin-top: var(--margin-top);
+}
+
+.skills .container .btns button {
+  all: unset;
+  background-color: rgb(23, 183, 23);
+  color: white;
+  padding: 10px 15px;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+@keyframes up-down {
+  0%,
+  100% {
+    transform: translateY(0px);
+  }
+
+  50% {
+    transform: translateY(-10px);
+  }
+}
+
+.skills .container .btns button:hover {
+  background-color: green;
+  animation: up-down 0.8s linear infinite;
+}
+/* End Skills */
+
+/* Start Projects */
+.projects {
+  margin-top: var(--margin-top);
+}
+
+.projects .container {
+  background-color: white;
+  border-radius: var(--container-border-radius);
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+  padding-block: var(--padding-section);
+}
+
+.projects .container h3 {
+  font-size: 30px;
+}
+
+.projects .container .project:not(:last-of-type) {
+  width: 220px;
+  height: 180px;
+  margin-top: 20px;
+  padding: 10px;
+  border-radius: var(--container-border-radius);
+}
+
+.projects .container .project:first-of-type {
+  background-color: orange;
+  text-align: center;
+}
+
+.projects .container .project:nth-of-type(2) {
+  background-color: dodgerblue;
+  text-align: center;
+}
+
+.projects .container .project:last-of-type {
+  width: calc(100% + 40px);
+  height: 150px;
+  background-color: dimgray;
+  border-radius: var(--container-border-radius);
+  text-align: center;
+  padding-block: 5px;
+}
+/* End Projects */
+
+/* Start Contact-me */
+.contact-me {
+  margin-top: var(--margin-top);
+}
+
+.contact-me .container {
+  padding-block: var(--padding-section);
+  border-radius: var(--container-border-radius);
+  background-color: #e1dede;
+  box-shadow: 0 0 5px rgba(0, 0, 0, 0.3);
+}
+
+.contact-me .container form div {
+  display: flex;
+  flex-direction: column;
+  margin-top: 10px;
+}
+
+.contact-me .container form div input {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid gray;
+  width: calc(100% + 15px);
+  caret-color: green;
+}
+
+.contact-me .container form div input:focus {
+  border-color: green;
+}
+
+.contact-me .container form div textarea {
+  margin-top: 5px;
+  padding: 10px;
+  border-radius: 5px;
+  outline: none;
+  border: 2px solid gray;
+  width: calc(100% + 15px);
+  height: 70px;
+  caret-color: green;
+}
+
+.contact-me .container form div textarea:focus {
+  border-color: green;
+}
+
+.contact-me .container form button[type="submit"] {
+  all: unset;
+  margin-top: 10px;
+  padding: 5px 10px;
+  border: 2px solid green;
+  border-radius: 5px;
+  color: green;
+  transition: 0.3s;
+  cursor: pointer;
+}
+
+.contact-me .container form button[type="submit"]:hover {
+  background-color: green;
+  color: white;
+}
+/* End Contact-me */
+
+/* Start Footer */
+.footer {
+  margin-top: var(--margin-top);
+  margin-bottom: 40px;
+}
+
+.footer .container {
+  background-color: #3d3c3c;
+  border-radius: var(--container-border-radius);
+  padding-block: 20px;
+  text-align: center;
+  color: white;
+}
+
+.footer .container p a {
+  color: gold;
+  transition: 0.3s;
+}
+
+.footer .container p a:hover {
+  color: white;
+}
+/* End Footer */
